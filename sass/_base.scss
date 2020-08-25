@@ -1,0 +1,45 @@
+//COLOR VARIABLES
+
+$color-primary: #b6b445;
+$color-primary-dark: #727204;
+
+$color-secondary: #313030;
+
+$color-blue-light-1: #e9e9ff;
+$color-blue-light-2: #8585fa;
+
+$color-blue-dark-1: #3030b8;
+$color-blue-dark-2:#1111e7;
+
+//FONT VARIABLES
+$font-primary:'Nunito', sans-serif;
+$font-display:'Josefin Sans', sans-serif;
+
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; //1rem = 10px because of 10px/16px = 62.5%; and 16px is default
+}
+
+body{
+    font-family: $font-primary;
+    color:$color-blue-dark-2;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: 80vh min-content 40vw repeat(3, min-content) ;
+    grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8,[col-start] minmax(min-content, 14rem) [col-end])[center-end] minmax(6rem,1fr) [full-end];
+
+  
+}
